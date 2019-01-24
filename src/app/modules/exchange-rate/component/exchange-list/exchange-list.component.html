@@ -1,0 +1,30 @@
+<div>
+  <div class="card">
+    <div class="body">
+      <div class="row">
+        <div class="col">
+          <h2>{{ item?.currency }}</h2>
+        </div>
+        <div class="col">
+          <h2 class="text-right">{{ item?.rate | number: '0.1-4' }}</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h3 class="font-italic font-weight-bold">
+            {{ item?.currency }}-{{ item?.currencyDetail }}
+          </h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h3>
+            1 USD = {{ item?.currency }}
+            {{ item?.exchangeRate | number: '0.1-4' }}
+          </h3>
+        </div>
+      </div>
+    </div>
+    <div class="button"><button type="button" (click)="delete(item)">-</button></div>
+  </div>
+</div>

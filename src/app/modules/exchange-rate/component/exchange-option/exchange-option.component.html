@@ -1,0 +1,34 @@
+<div class="mt-2 mb-2">
+  <div class="col-sm-12 p-2">
+    <div *ngIf="isForm" class="input-group ">
+      <select
+        class="custom-select"
+        [(ngModel)]="rateOpt"
+        id="inputGroupSelect02"
+      >
+        <option value="null">Select Currency</option>
+        <option *ngFor="let item of options" [ngValue]="item">
+          {{ item.currency }}
+        </option>
+      </select>
+      <div class="input-group-append">
+        <button
+          (click)="submit()"
+          class="btn btn-outline-secondary"
+          type="button"
+        >
+          Button
+        </button>
+      </div>
+    </div>
+    <div *ngIf="!isForm">
+      <button
+        (click)="isForm = true"
+        class="btn btn-outline-secondary btn-block"
+        type="button"
+      >
+        Add More Currencies (+)
+      </button>
+    </div>
+  </div>
+</div>

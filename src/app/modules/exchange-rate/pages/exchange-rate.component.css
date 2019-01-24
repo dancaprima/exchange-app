@@ -1,0 +1,13 @@
+.card-title {
+  padding: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.loader {
+  height: 450px;
+  display: flex;
+}
+
+.loader h3 {
+  margin: auto;
+}
